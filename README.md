@@ -1,0 +1,2 @@
+# octomap_test
+改写高博的octomap_tutor，创建rgbd_dataset_freiburg2_pioneer_slam2.bag的部分地图。
