@@ -134,8 +134,10 @@ int main( int argc, char** argv )
 
 	//将3D点插入地图
 	octomap::point3d octomap_point3d( point_world[0],point_world[1],point_world[2] );
-	tree.updateNode(octomap_point3d,true);
- 	tree.setNodeColor(point_world[0],point_world[1],point_world[2],r,g,b);
+	octomap::ColorOcTreeNode* node = tree.updateNode(octomap_point3d,true);
+	node->setColor(r,g,b);
+	//tree.updateNode(octomap_point3d,true);
+ 	//tree.setNodeColor(point_world[0],point_world[1],point_world[2],r,g,b);
       }
  
     tree.updateInnerOccupancy();
